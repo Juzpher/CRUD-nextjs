@@ -5,8 +5,8 @@ import { prisma } from "@/lib/prisma";
 export default async function page() {
   const post = await prisma.post.findMany();
   return (
-    <div className="h-screen w-full m-5">
-      <div className="gap-3 flex">
+    <div className="min-h-screen lg:px-32 2xl:max-w-screen-2xl 2xl:mx-auto relative">
+      <div className="gap-3 flex justify-start">
         {post.map((post) => (
           <NoteCard
             key={post.id}

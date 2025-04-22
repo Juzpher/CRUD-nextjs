@@ -10,7 +10,7 @@ interface NoteProps {
 
 const NoteCard: React.FC<NoteProps> = ({ title, body, id, slug }) => {
   return (
-    <div className="card bg-base-300 w-96 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div className="card bg-base-200 w-96 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
       <div className="card-body p-6">
         <div className="flex flex-col gap-3">
           <div className="flex items-center justify-between">
@@ -20,7 +20,7 @@ const NoteCard: React.FC<NoteProps> = ({ title, body, id, slug }) => {
           <p className="text-base-content/80 line-clamp-3">{body}</p>
 
           <div className="card-actions justify-end mt-4">
-            <Link href={`task/${slug}`} className="btn btn-sm btn-info">
+            <Link href={`task/${slug}`} className="btn btn-sm btn-primary">
               View
             </Link>
             <button className="btn btn-sm btn-ghost">Edit</button>
